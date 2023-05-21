@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Details</title>
+  <style>
+    body {
+      background-image: url('https://source.unsplash.com/random/1920x1080?job,career');
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    body:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: -1;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+
+    h3 {
+      font-size: 1.8em;
+      margin-bottom: 0.25em;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5em 1em;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      font-size: 1.1em;
+      margin-top: 1em;
+    }
+
+    a:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+<body>
+  <h1>{{ cv.full_name }}</h1>
+  {% if cv.sector %}
+    <h3>Sector</h3>
+    <p>{{ cv.sector }}</p>
+  {% endif %}
+  <h3>Contact Information</h3>
+  <p>Email: {{ cv.candidate.email }}</p>
+  <p>Contact Number: {{ cv.contact_number }}</p>
+  <p>Address: {{ cv.address }}</p>
+
+  <h3>Experience</h3>
+  <p>{{ cv.experience }} years</p>
+
+  <h3>Skills</h3>
+  <p>{{ cv.skills }}</p>
+
+  <h3>GCSE Passes</h3>
+  <p>{{ cv.gcse_passes }}</p>
+
+  <h3>Educational Qualification</h3>
+  <p>{{ cv.education_level }}</p>
+
+  <h3>Past Experience</h3>
+  <p>{{ cv.past_experience }}</p>
+
+  {% if cv.references %}
+    <h3>References</h3>
+    <p>{{ cv.references }}</p>
+  {% endif %}
+
+  <!-- Add a back button to return to the employer_dashboard -->
+  <a href="{{ url_for('employer_dashboard') }}">Back to Dashboard</a>
+</body>
+</html>
