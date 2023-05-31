@@ -1,2 +1,5 @@
 __pycache__/
 .idea/
+/get_all_files.py
+logs/
+test/
