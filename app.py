@@ -329,7 +329,7 @@ if __name__ == '__main__':
             if os.path.exists(Config.First_run):
                 db.create_all()
                 logger.info("New tables are created")
-        app.run(debug=True)
+        app.run(host = "0.0.0.0", port = 5000, debug = True)
     except Exception as e:
         logger.critical(e)
 
