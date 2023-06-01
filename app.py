@@ -32,10 +32,6 @@ def candidate_register():
         return redirect(url_for('candidate_login'))
     return render_template('candidate_register.html')
 
-
-
-
-
 @app.route('/employer_register', methods=['GET', 'POST'])
 def employer_register():
     print("/employer_register used")
