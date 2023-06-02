@@ -12,30 +12,24 @@ The project uses SQLAlchemy, a popular Object-Relational Mapping (ORM) library, 
 Infuture I will host it in AWS and containerize using Docker.
 
 ### Prerequisites
-Python 3.x
-Flask
-Flask SQLAlchemy
-ReportLab
+Python 3.x<br />
+Flask<br />
+Flask SQLAlchemy<br />
+ReportLab<br />
 
 ### Installation
 Clone the repository or download the source code.<br />
 Open a terminal and navigate to the project directory.<br />
 Create a virtual environment (optional but recommended):<br />
-In the terminal run using<br />
+Install all the dependencies from requirements.txt <br />
+In the terminal run using puthon3 app.py<br />
 
 ### Docker Setup
 This project can be set up using docker as well. Dockerfile is available with the source code.
 
 
 ### Set up the database:
-Open the app.py file.<br />
-Uncomment the appropriate line based on your database preference (SQLite or MS SQL Server).<br />
-Save the file.<br />
-Initialize the database:<br />
-In the terminal, run python app.py to create the necessary tables.<br />
-Start the application:<br />
-In the terminal, run python app.py.<br />
-Open a web browser and visit http://localhost:5000 to access the CV Management System.<br />
+This code comes with sql-lite database integrated. So there is no special setup for the database.
 
 
 ### Usage:
