@@ -2,6 +2,8 @@
 
 # Job Seeker Platform
 
+Can be viewed in <a href="http://54.163.142.145:5000/" target="_blank">http://54.163.142.145:5000</a>
+
 ### Individual Project
 
 ### Description
